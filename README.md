@@ -18,8 +18,9 @@ Genius AI using Open AI
 
 
 ## Images
-![image](https://github.com/GM-Frost/Genius-AI-SaaS/assets/110303752/8cb28f7c-d371-4242-be8a-24b48970c9df)
-![image](https://github.com/GM-Frost/Genius-AI-SaaS/assets/110303752/46b9cf0a-078b-41f3-9fb4-752edab4eca5)
+![image](https://github.com/GM-Frost/Genius-AI-SaaS/assets/110303752/94b5eff3-1941-44f1-9524-4be54ab34a3a)
+
+![image](https://github.com/GM-Frost/Genius-AI-SaaS/assets/110303752/5cadc39a-c5ef-4714-bb0b-79736455bc2d)
 
 
 
