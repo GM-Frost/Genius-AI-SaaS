@@ -1,5 +1,6 @@
 import Navbar from "@/components/navbar";
 import Sidebar from "@/components/sidebar";
+import Footer from "@/components/footer";
 import React from "react";
 
 const layout = ({ children }: { children: React.ReactNode }) => {
@@ -8,6 +9,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
       <div className="hidden h-full md:flex md:w-72 md:flex-col md:fixed md:inset-y-0 z-[80] bg-gray-900">
         <Sidebar />
       </div>
+      <Footer />
       <main className="md:pl-72">
         <Navbar />
         {children}
