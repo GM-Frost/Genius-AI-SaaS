@@ -16,6 +16,13 @@ Genius AI using Open AI
 - **Video Generation**: OpenAI generated Videos
 - **Code Generation**: Code generation like Chat GPT
 
+
+## Images
+![image](https://github.com/GM-Frost/Genius-AI-SaaS/assets/110303752/8cb28f7c-d371-4242-be8a-24b48970c9df)
+![image](https://github.com/GM-Frost/Genius-AI-SaaS/assets/110303752/46b9cf0a-078b-41f3-9fb4-752edab4eca5)
+
+
+
 ## Technologies Used
 
 - [Next.js](https://nextjs.org/)
