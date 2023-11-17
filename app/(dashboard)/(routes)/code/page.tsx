@@ -24,7 +24,9 @@ import UserAvatar from "@/components/user-avatar";
 import { BotAvatar } from "@/components/bot-avatar";
 
 import ReactMarkdown from "react-markdown";
+import { UseProModal } from "@/hooks/use-pro-modal";
 const CodePage = () => {
+  const proModal = UseProModal();
   const router = useRouter();
 
   const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([]);
@@ -53,7 +55,10 @@ const CodePage = () => {
 
       form.reset();
     } catch (error: any) {
-      console.log("Error: ", error);
+      //OPEN PRO MODAL
+      if (error?.response?.status === 403) {
+        proModal.onOpen();
+      }
     } finally {
       router.refresh();
     }
