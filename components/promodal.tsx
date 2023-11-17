@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -23,7 +23,8 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-
+import axios from "axios";
+import { subscribe } from "diagnostics_channel";
 const tools = [
   {
     label: "Conversation",
@@ -60,6 +61,19 @@ const tools = [
 
 export const Promodal = () => {
   const proModal = UseProModal();
+  const [loading, setLoading] = useState(false);
+
+  const onSubscribe = async () => {
+    try {
+      setLoading(true);
+      const response = await axios.get("/api/stripe");
+      window.location.href = response.data.url;
+    } catch (error) {
+      console.log("Client Error: ", error);
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <Dialog open={proModal.isOpen} onOpenChange={proModal.onClose}>
       <DialogContent>
@@ -90,7 +104,12 @@ export const Promodal = () => {
           </DialogDescription>
         </DialogHeader>
         <DialogFooter>
-          <Button size="lg" variant="premium" className="w-full">
+          <Button
+            onClick={onSubscribe}
+            size="lg"
+            variant="premium"
+            className="w-full"
+          >
             Upgrade
             <Zap className="w-4 h-4 ml-2 fill-white" />
           </Button>
