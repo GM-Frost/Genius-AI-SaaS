@@ -22,8 +22,10 @@ import Heading from "@/components/Heading";
 import { Loader } from "@/components/loader";
 import UserAvatar from "@/components/user-avatar";
 import { BotAvatar } from "@/components/bot-avatar";
+import { UseProModal } from "@/hooks/use-pro-modal";
 
 const ConversationPage = () => {
+  const proModal = UseProModal();
   const router = useRouter();
 
   const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([]);
@@ -52,7 +54,10 @@ const ConversationPage = () => {
 
       form.reset();
     } catch (error: any) {
-      console.log("Error: ", error);
+      //OPEN PRO MODAL
+      if (error?.response?.status === 403) {
+        proModal.onOpen();
+      }
     } finally {
       router.refresh();
     }
