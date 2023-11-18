@@ -29,12 +29,27 @@ Genius AI using Open AI
 - [Next.js](https://nextjs.org/)
 - [Vercel](https://vercel.com/)
 - [openAI](https://openai.com)
+- [stripe](https://stripe.com)
+- [crisp-chat](https://crisp.chat/en/)
+- [prismadB](https://www.prisma.io)
+- [clerk](https://clerk.com)
+- [shadcnui](https://ui.shadcn.com/) 
+- [Replicate](https://replicate.com) 
 
 ## Dependencies
 
-- [shadcnui](https://ui.shadcn.com/)
+- [shadcnui](https://ui.shadcn.com/) - Replacement for Material UI/Bootstrap
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Vercel](https://vercel.com/)
-- [openAI API](https://openai.com)
+- [Tailwind CSS](https://tailwindcss.com/) - Stylesheet
+- [Vercel](https://vercel.com/) - Deployment
+- [OpenAI API](https://openai.com) - 
+- [clerk](https://clerk.com) - Replacement for AuthO/Authentication
+- [prismadB](https://www.prisma.io) - TypeSafe Database client
+- [crisp-chat](https://crisp.chat/en/) - Chat human/BOT
+- [Lucid React](https://lucide.dev/guide/packages/lucide-react) -  Icon library
+- [react-hot-toast](https://react-hot-toast.com/) -  Toast notification
+- [Replicate](https://replicate.com) - Music and Video Generation AI
+- [stripe](https://stripe.com) - Payment Processing
+- [zod](https://zod.dev/) - TypeScript-first schema 
+- [zustand](https://zustand-demo.pmnd.rs/) -  state-management solution with API / Replacement for Redux
