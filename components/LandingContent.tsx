@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Avatar, AvatarFallback } from "./ui/avatar";
 
 const testimonials = [
   {
@@ -35,6 +36,11 @@ const LandingContent = () => {
           >
             <CardHeader>
               <CardTitle className="flex items-center gap-x-2">
+                <Avatar className="h-8 w-8 border-2 border-purple-500">
+                  <AvatarFallback className=" bg-transparent">
+                    {item.avatar}
+                  </AvatarFallback>
+                </Avatar>
                 <div>
                   <p className="text-lg">{item.name}</p>
                   <p className="text-zinc-400 text-sm">{item.title}</p>
