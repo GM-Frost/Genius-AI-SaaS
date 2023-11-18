@@ -25,6 +25,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import axios from "axios";
 import { subscribe } from "diagnostics_channel";
+import toast from "react-hot-toast";
 const tools = [
   {
     label: "Conversation",
@@ -69,7 +70,7 @@ export const Promodal = () => {
       const response = await axios.get("/api/stripe");
       window.location.href = response.data.url;
     } catch (error) {
-      console.log("Client Error: ", error);
+      toast.error("Something went wrong");
     } finally {
       setLoading(false);
     }
@@ -105,6 +106,7 @@ export const Promodal = () => {
         </DialogHeader>
         <DialogFooter>
           <Button
+            disabled={loading}
             onClick={onSubscribe}
             size="lg"
             variant="premium"

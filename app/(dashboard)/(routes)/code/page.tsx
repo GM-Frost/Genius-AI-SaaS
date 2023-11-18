@@ -5,7 +5,7 @@ import axios from "axios";
 import { Code } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-
+import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import { ChatCompletionRequestMessage } from "openai";
 
@@ -25,6 +25,7 @@ import { BotAvatar } from "@/components/bot-avatar";
 
 import ReactMarkdown from "react-markdown";
 import { UseProModal } from "@/hooks/use-pro-modal";
+
 const CodePage = () => {
   const proModal = UseProModal();
   const router = useRouter();
@@ -58,6 +59,8 @@ const CodePage = () => {
       //OPEN PRO MODAL
       if (error?.response?.status === 403) {
         proModal.onOpen();
+      } else {
+        toast.error("Something went wrong");
       }
     } finally {
       router.refresh();
